@@ -75,7 +75,7 @@ sudo apt-get update -y
 # Install jq, a command-line JSON processor
 sudo apt-get install -y jq
 
-# Retrieve the local IP address of the eth0 interface and set it for kubelet
+# Retrieve the local IP address of the eth0 interface and set it for kubelett
 # local_ip="$(ip --json addr show eth1 | jq -r '.[0].addr_info[] | select(.family == "inet") | .local')"
 local_ip="$(ip --json addr show enp39s0 | jq -r '.[0].addr_info[] | select(.family == "inet") | .local')"
 
